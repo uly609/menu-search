@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="搜索今天想吃的菜，按分类快速找到喜欢的菜单。" />
+    <title>今天吃什么 | 菜单搜索器</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="site-shell">
+      <header class="topbar"><a class="brand" href="#top"><span class="brand-icon">餐</span><span>今日菜单<span class="brand-dot">.</span></span></a><span class="top-tag">MENU FINDER <span>✦</span></span></header>
+      <section class="hero" id="top">
+        <div class="hero-copy"><p class="eyebrow">A GOOD MEAL STARTS HERE</p><h1>今天想吃点<br /><span>什么好呢？</span></h1><p class="hero-lead">搜搜看，让下一餐的灵感自己出现。</p></div>
+        <div class="hero-illustration" aria-hidden="true"><div class="plate"><span>🍜</span></div><span class="orbit orbit-one">✦</span><span class="orbit orbit-two">✳</span><span class="orbit orbit-three">·</span></div>
+      </section>
+      <section class="search-section" aria-label="搜索菜单">
+        <label class="search-box" for="searchInput"><span class="search-icon" aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="搜索菜名、食材或口味…" autocomplete="off" /><kbd>⌘ K</kbd><button id="clearSearch" class="clear-search" type="button" aria-label="清空搜索" hidden>×</button></label>
+        <div class="filter-row"><div class="filters" id="filters" aria-label="菜品分类"><button class="filter-chip active" data-category="全部" type="button">全部 <span>12</span></button><button class="filter-chip" data-category="主食" type="button">主食</button><button class="filter-chip" data-category="热菜" type="button">热菜</button><button class="filter-chip" data-category="汤品" type="button">汤品</button><button class="filter-chip" data-category="轻食" type="button">轻食</button></div><span class="result-count" id="resultCount">找到 12 道菜</span></div>
+      </section>
+      <section class="menu-section" aria-live="polite"><div class="section-heading"><h2>菜单灵感</h2><span>今日精选</span></div><div class="menu-grid" id="menuGrid"></div><div class="empty-state" id="emptyState" hidden><div>🍽️</div><h3>没有找到这道菜</h3><p>换个关键词试试，比如“鸡肉”或“清淡”。</p><button id="resetSearch" type="button">查看全部菜单</button></div></section>
+      <footer>吃好每一餐，也照顾好自己 <span>✦</span></footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
